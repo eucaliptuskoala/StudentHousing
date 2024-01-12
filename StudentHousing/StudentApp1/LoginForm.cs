@@ -9,7 +9,7 @@ namespace StudentApp1
 {
     public partial class LoginForm : Form
     {
-        private readonly string filePath = "users.json";
+        private readonly string filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "..\\..\\..\\users.json");
 
         public LoginForm()
         {

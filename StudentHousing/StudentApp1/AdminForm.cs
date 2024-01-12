@@ -17,8 +17,8 @@ namespace StudentApp1
 {
     public partial class AdminForm : Form
     {
-        private const string jsonFilePath = "users.json";
-        private const string messageFilePath = "AnnouncementMessage.json";
+        private string jsonFilePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "..\\..\\..\\users.json");
+        private string messageFilePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "..\\..\\..\\AnnouncementMessage.json");
         private UserDatabase userDatabase;
         private List<Room> rooms = new List<Room>();
 

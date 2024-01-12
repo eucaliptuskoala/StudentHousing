@@ -27,7 +27,8 @@ namespace StudentApp1
         {
             try
             {
-                string json = File.ReadAllText("notes.json");
+                string notesFilePath = Path.Combine(Application.StartupPath, "notes.json");
+                string json = File.ReadAllText(notesFilePath);
                 notes = JsonConvert.DeserializeObject<List<Note>>(json);
             }
             catch (FileNotFoundException)
@@ -38,8 +39,11 @@ namespace StudentApp1
 
         private void SaveNotes()
         {
+
+            string notesFilePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "..\\..\\..\\notes.json");
             string json = JsonConvert.SerializeObject(notes);
-            File.WriteAllText("notes.json", json);
+            File.WriteAllText(notesFilePath, json);
+
         }
 
         private void BackButton_Click(object sender, EventArgs e)

@@ -36,8 +36,7 @@ namespace StudentApp1
         }
         private void LoadNotes()
         {
-            // Load notes from JSON file
-            string jsonFilePath = Path.Combine(Application.StartupPath, "notes.json");
+            string jsonFilePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "..\\..\\..\\notes.json");
 
             if (File.Exists(jsonFilePath))
             {

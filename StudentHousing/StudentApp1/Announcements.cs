@@ -7,7 +7,7 @@ namespace StudentApp1
 {
     public partial class Announcements : Form
     {
-        private const string jsonFileName = "AnnouncementMessage.json";
+        private string jsonFileName = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "..\\..\\..\\AnnouncementMessage.json");
         private string StudentName;
 
         public Announcements()
