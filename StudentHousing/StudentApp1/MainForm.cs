@@ -1,3 +1,5 @@
+using StudentHousing;
+
 namespace StudentApp1
 {
     public partial class MainForm : Form
@@ -15,7 +17,7 @@ namespace StudentApp1
 
         private void Announcements_Click(object sender, EventArgs e)
         {
-            Announcements announcements = new Announcements();  
+            Announcements announcements = new Announcements();
             this.Hide();
             announcements.Show();
         }
@@ -56,6 +58,13 @@ namespace StudentApp1
             ToDoForm toDoForm = new ToDoForm(CurrentUser.LoggedInUser);
             this.Close();
             toDoForm.Show();
+        }
+
+        private void Schedule_Click(object sender, EventArgs e)
+        {
+            ScheduleForm scheduleForm = new ScheduleForm(CurrentUser.LoggedInUser);
+            scheduleForm.Show();
+            this.Close();
         }
     }
 }
