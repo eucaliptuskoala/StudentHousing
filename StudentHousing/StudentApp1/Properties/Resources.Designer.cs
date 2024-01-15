@@ -63,9 +63,99 @@ namespace StudentHousing.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _22 {
+            get {
+                object obj = ResourceManager.GetObject("22", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _4853433 {
+            get {
+                object obj = ResourceManager.GetObject("4853433", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _48534331 {
+            get {
+                object obj = ResourceManager.GetObject("48534331", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _8ecd7a74040c6137d8db25014de3cfaa {
             get {
                 object obj = ResourceManager.GetObject("8ecd7a74040c6137d8db25014de3cfaa", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap abstract_background_blue_wallpaper_image {
+            get {
+                object obj = ResourceManager.GetObject("abstract-background-blue-wallpaper-image", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap abstract_bluish_paint_background_wallpaper {
+            get {
+                object obj = ResourceManager.GetObject("abstract-bluish-paint-background-wallpaper", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap abstract_bluish_paint_background_wallpaper1 {
+            get {
+                object obj = ResourceManager.GetObject("abstract-bluish-paint-background-wallpaper1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap banner_with_abstract_background_with_colorful_paper_cutout_waves {
+            get {
+                object obj = ResourceManager.GetObject("banner-with-abstract-background-with-colorful-paper-cutout-waves", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap c15 {
+            get {
+                object obj = ResourceManager.GetObject("c15", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap c151 {
+            get {
+                object obj = ResourceManager.GetObject("c151", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -106,6 +196,66 @@ namespace StudentHousing.Properties {
         internal static System.Drawing.Bitmap rm222_mind_20 {
             get {
                 object obj = ResourceManager.GetObject("rm222-mind-20", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap rt5 {
+            get {
+                object obj = ResourceManager.GetObject("rt5", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tyhb_9 {
+            get {
+                object obj = ResourceManager.GetObject("tyhb_9", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap v463_aum_69_abstractbackground {
+            get {
+                object obj = ResourceManager.GetObject("v463-aum-69-abstractbackground", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap watercolor_texture_background_light_gray_wallpaper {
+            get {
+                object obj = ResourceManager.GetObject("watercolor-texture-background-light-gray-wallpaper", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap watercolor_texture_color_wallpaper {
+            get {
+                object obj = ResourceManager.GetObject("watercolor-texture-color-wallpaper", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap xoe10 {
+            get {
+                object obj = ResourceManager.GetObject("xoe10", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

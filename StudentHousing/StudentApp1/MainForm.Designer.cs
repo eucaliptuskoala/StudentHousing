@@ -144,7 +144,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.DarkGray;
             BackgroundImage = StudentHousing.Properties.Resources._8ecd7a74040c6137d8db25014de3cfaa;
-            BackgroundImageLayout = ImageLayout.None;
+            BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(845, 638);
             Controls.Add(Notes);
             Controls.Add(Complaints);

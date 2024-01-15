@@ -172,6 +172,130 @@
   },
   {
     "RoomNumber": 8,
+    "Users": [
+      {
+        "Id": 36,
+        "Name": "pip",
+        "Username": "pip",
+        "Age": 16,
+        "Room": 8,
+        "Email": "pip",
+        "Password": "pip",
+        "UserRoom": null
+      }
+    ],
+    "Tasks": [
+      {
+        "taskId": 1,
+        "description": "Perform Bathroom task",
+        "dateTime": "2024-01-22T23:03:38.1649458+01:00",
+        "TaskType": 0
+      },
+      {
+        "taskId": 2,
+        "description": "Perform Kitchen task",
+        "dateTime": "2024-01-22T23:03:38.1651452+01:00",
+        "TaskType": 0
+      },
+      {
+        "taskId": 3,
+        "description": "Perform Hallway task",
+        "dateTime": "2024-01-22T23:03:38.1651478+01:00",
+        "TaskType": 0
+      },
+      {
+        "taskId": 4,
+        "description": "Perform Clothes task",
+        "dateTime": "2024-01-22T23:03:38.1651483+01:00",
+        "TaskType": 0
+      },
+      {
+        "taskId": 5,
+        "description": "Perform Garbage task",
+        "dateTime": "2024-01-22T23:03:38.1651486+01:00",
+        "TaskType": 0
+      },
+      {
+        "taskId": 6,
+        "description": "Perform Dishes task",
+        "dateTime": "2024-01-22T23:03:38.1651492+01:00",
+        "TaskType": 0
+      },
+      {
+        "taskId": 7,
+        "description": "Perform Paper task",
+        "dateTime": "2024-01-22T23:03:38.1651508+01:00",
+        "TaskType": 0
+      }
+    ],
+    "Notes": [
+      {
+        "Content": "private void DisplayLatestNotes(List<Note> notes)\n{\n    Panel notesContainer = new Panel\n    {\n        Dock = DockStyle.Fill,\n        AutoScroll = true,\n    };\n\n    NotesPanel.Controls.Clear();\n    NotesPanel.Controls.Add(notesContainer);\n\n    int startIndex = Math.Max(0, notes.Count - 4);\n\n    for (int i = startIndex, noteNumber = 1; i < notes.Count; i++, noteNumber++)\n    {\n        Note note = notes[i];\n        User currentUser = CurrentUser.LoggedInUser;\n\n        Panel notePanel = new Panel\n        {\n            Dock = DockStyle.Top,\n            AutoSize = true,\n            Margin = new Padding(0, 0, 0, 10),\n        };\n\n        Label label = new Label\n        {\n            Text = $\"{noteNumber}. {TruncateText(note.Content, 300)}\",\n            AutoSize = true,\n            MaximumSize = new Size(400, 0),\n            Font = new Font(\"Arial\", 12, FontStyle.Regular),\n        };\n\n        Button deleteButton = new Button\n        {\n            Text = \"Delete\",\n            Tag = note,\n            Font = new Font(\"Arial\", 10, FontStyle.Regular),\n        };\n\n        deleteButton.Click += DeleteNoteButton_Click;\n\n        label.Location = new Point(0, 0);\n        notePanel.Controls.Add(label);\n\n        if (label.Right > 400)\n        {\n            label.MaximumSize = new Size(400 - deleteButton.Width - 10, 0);\n            deleteButton.Location = new Point(label.Right + 10, 0);\n            notePanel.Controls.Add(deleteButton);\n        }\n        else\n        {\n            deleteButton.Location = new Point(label.Right + 10, 0);\n            notePanel.Controls.Add(label);\n            notePanel.Controls.Add(deleteButton);\n        }\n\n        label.Click += (sender, e) => ShowNoteDetails(note);\n\n        notesContainer.Controls.Add(notePanel);\n    }\n\n    // Добавим немного пустого места в конце\n    Panel spacerPanel = new Panel\n    {\n        Height = 20,\n        Dock = DockStyle.Top,\n    };\n\n    notesContainer.Controls.Add(spacerPanel);\n}"
+      },
+      {
+        "Content": "private void DisplayLatestNotes(List<Note> notes)\n{\n    Panel notesContainer = new Panel\n    {\n        Dock = DockStyle.Fill,\n        AutoScroll = true,\n    };\n\n    NotesPanel.Controls.Clear();\n    NotesPanel.Controls.Add(notesContainer);\n\n    int startIndex = Math.Max(0, notes.Count - 4);\n\n    for (int i = startIndex, noteNumber = 1; i < notes.Count; i++, noteNumber++)\n    {\n        Note note = notes[i];\n        User currentUser = CurrentUser.LoggedInUser;\n\n        Panel notePanel = new Panel\n        {\n            Dock = DockStyle.Top,\n            AutoSize = true,\n            Margin = new Padding(0, 0, 0, 10),\n        };\n\n        Label label = new Label\n        {\n            Text = $\"{noteNumber}. {TruncateText(note.Content, 300)}\",\n            AutoSize = true,\n            MaximumSize = new Size(400, 0),\n            Font = new Font(\"Arial\", 12, FontStyle.Regular),\n        };\n\n        Button deleteButton = new Button\n        {\n            Text = \"Delete\",\n            Tag = note,\n            Font = new Font(\"Arial\", 10, FontStyle.Regular),\n        };\n\n        deleteButton.Click += DeleteNoteButton_Click;\n\n        label.Location = new Point(0, 0);\n        notePanel.Controls.Add(label);\n\n        if (label.Right > 400)\n        {\n            label.MaximumSize = new Size(400 - deleteButton.Width - 10, 0);\n            deleteButton.Location = new Point(label.Right + 10, 0);\n            notePanel.Controls.Add(deleteButton);\n        }\n        else\n        {\n            deleteButton.Location = new Point(label.Right + 10, 0);\n            notePanel.Controls.Add(label);\n            notePanel.Controls.Add(deleteButton);\n        }\n\n        label.Click += (sender, e) => ShowNoteDetails(note);\n\n        notesContainer.Controls.Add(notePanel);\n    }\n\n    // Добавим немного пустого места в конце\n    Panel spacerPanel = new Panel\n    {\n        Height = 20,\n        Dock = DockStyle.Top,\n    };\n\n    notesContainer.Controls.Add(spacerPanel);\n}"
+      },
+      {
+        "Content": "private void DisplayLatestNotes(List<Note> notes)\n{\n    Panel notesContainer = new Panel\n    {\n        Dock = DockStyle.Fill,\n        AutoScroll = true,\n    };\n\n    NotesPanel.Controls.Clear();\n    NotesPanel.Controls.Add(notesContainer);\n\n    int startIndex = Math.Max(0, notes.Count - 4);\n\n    for (int i = startIndex, noteNumber = 1; i < notes.Count; i++, noteNumber++)\n    {\n        Note note = notes[i];\n        User currentUser = CurrentUser.LoggedInUser;\n\n        Panel notePanel = new Panel\n        {\n            Dock = DockStyle.Top,\n            AutoSize = true,\n            Margin = new Padding(0, 0, 0, 10),\n        };\n\n        Label label = new Label\n        {\n            Text = $\"{noteNumber}. {TruncateText(note.Content, 300)}\",\n            AutoSize = true,\n            MaximumSize = new Size(400, 0),\n            Font = new Font(\"Arial\", 12, FontStyle.Regular),\n        };\n\n        Button deleteButton = new Button\n        {\n            Text = \"Delete\",\n            Tag = note,\n            Font = new Font(\"Arial\", 10, FontStyle.Regular),\n        };\n\n        deleteButton.Click += DeleteNoteButton_Click;\n\n        label.Location = new Point(0, 0);\n        notePanel.Controls.Add(label);\n\n        if (label.Right > 400)\n        {\n            label.MaximumSize = new Size(400 - deleteButton.Width - 10, 0);\n            deleteButton.Location = new Point(label.Right + 10, 0);\n            notePanel.Controls.Add(deleteButton);\n        }\n        else\n        {\n            deleteButton.Location = new Point(label.Right + 10, 0);\n            notePanel.Controls.Add(label);\n            notePanel.Controls.Add(deleteButton);\n        }\n\n        label.Click += (sender, e) => ShowNoteDetails(note);\n\n        notesContainer.Controls.Add(notePanel);\n    }\n\n    // Добавим немного пустого места в конце\n    Panel spacerPanel = new Panel\n    {\n        Height = 20,\n        Dock = DockStyle.Top,\n    };\n\n    notesContainer.Controls.Add(spacerPanel);\n}"
+      }
+    ]
+  },
+  {
+    "RoomNumber": 9,
+    "Users": [],
+    "Tasks": [],
+    "Notes": []
+  },
+  {
+    "RoomNumber": 10,
+    "Users": [],
+    "Tasks": [],
+    "Notes": []
+  },
+  {
+    "RoomNumber": 1,
+    "Users": [],
+    "Tasks": [],
+    "Notes": []
+  },
+  {
+    "RoomNumber": 2,
+    "Users": [],
+    "Tasks": [],
+    "Notes": []
+  },
+  {
+    "RoomNumber": 3,
+    "Users": [],
+    "Tasks": [],
+    "Notes": []
+  },
+  {
+    "RoomNumber": 4,
+    "Users": [],
+    "Tasks": [],
+    "Notes": []
+  },
+  {
+    "RoomNumber": 5,
+    "Users": [],
+    "Tasks": [],
+    "Notes": []
+  },
+  {
+    "RoomNumber": 6,
+    "Users": [],
+    "Tasks": [],
+    "Notes": []
+  },
+  {
+    "RoomNumber": 7,
+    "Users": [],
+    "Tasks": [],
+    "Notes": []
+  },
+  {
+    "RoomNumber": 8,
     "Users": [],
     "Tasks": [],
     "Notes": []

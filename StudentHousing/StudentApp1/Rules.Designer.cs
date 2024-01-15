@@ -40,7 +40,7 @@
             // AcceptButton
             // 
             AcceptButton.BackColor = Color.White;
-            AcceptButton.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            AcceptButton.Font = new Font("Segoe UI", 14.25F);
             AcceptButton.Location = new Point(635, 396);
             AcceptButton.Name = "AcceptButton";
             AcceptButton.Size = new Size(136, 42);
@@ -52,7 +52,7 @@
             // richTextBox1
             // 
             richTextBox1.BackColor = Color.White;
-            richTextBox1.Font = new Font("Georgia", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            richTextBox1.Font = new Font("Georgia", 14.25F);
             richTextBox1.Location = new Point(65, 74);
             richTextBox1.Name = "richTextBox1";
             richTextBox1.ReadOnly = true;
@@ -64,7 +64,7 @@
             // 
             label1.AutoSize = true;
             label1.BackColor = Color.Transparent;
-            label1.Font = new Font("Cambria", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.Font = new Font("Cambria", 14.25F);
             label1.ForeColor = Color.White;
             label1.Location = new Point(286, 30);
             label1.Name = "label1";
@@ -77,7 +77,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ControlLightLight;
-            BackgroundImage = StudentHousing.Properties.Resources._8ecd7a74040c6137d8db25014de3cfaa;
+            BackgroundImage = StudentHousing.Properties.Resources._22;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(800, 450);
             Controls.Add(label1);

@@ -55,6 +55,7 @@
             label1 = new Label();
             RegisterButton = new Button();
             LogOutLabel1 = new Label();
+            tabPage3 = new TabPage();
             tabPage2.SuspendLayout();
             tabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
@@ -68,13 +69,15 @@
             // 
             // tabPage2
             // 
+            tabPage2.BackgroundImage = StudentHousing.Properties.Resources.watercolor_texture_background_light_gray_wallpaper;
+            tabPage2.BackgroundImageLayout = ImageLayout.Stretch;
             tabPage2.Controls.Add(sendAnnouncement_btn);
             tabPage2.Controls.Add(textBox7);
             tabPage2.Controls.Add(LogOutLabel2);
-            tabPage2.Location = new Point(4, 40);
+            tabPage2.Location = new Point(4, 39);
             tabPage2.Name = "tabPage2";
-            tabPage2.Padding = new Padding(3, 3, 3, 3);
-            tabPage2.Size = new Size(789, 405);
+            tabPage2.Padding = new Padding(3);
+            tabPage2.Size = new Size(789, 406);
             tabPage2.TabIndex = 1;
             tabPage2.Text = "Announcements";
             tabPage2.UseVisualStyleBackColor = true;
@@ -86,7 +89,7 @@
             sendAnnouncement_btn.Name = "sendAnnouncement_btn";
             sendAnnouncement_btn.Size = new Size(295, 34);
             sendAnnouncement_btn.TabIndex = 11;
-            sendAnnouncement_btn.Text = "Send Announcement";
+            sendAnnouncement_btn.Text = "Send an announcement";
             sendAnnouncement_btn.UseVisualStyleBackColor = true;
             sendAnnouncement_btn.Click += sendAnnouncement_btn_Click;
             // 
@@ -102,7 +105,7 @@
             // LogOutLabel2
             // 
             LogOutLabel2.AutoSize = true;
-            LogOutLabel2.Font = new Font("Trebuchet MS", 18F, FontStyle.Bold, GraphicsUnit.Point);
+            LogOutLabel2.Font = new Font("Trebuchet MS", 18F, FontStyle.Bold);
             LogOutLabel2.ForeColor = Color.DarkOrchid;
             LogOutLabel2.Location = new Point(683, 3);
             LogOutLabel2.Name = "LogOutLabel2";
@@ -115,7 +118,8 @@
             // 
             tabControl1.Controls.Add(tabPage1);
             tabControl1.Controls.Add(tabPage2);
-            tabControl1.Font = new Font("Sitka Small", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            tabControl1.Controls.Add(tabPage3);
+            tabControl1.Font = new Font("Sitka Small", 15.75F);
             tabControl1.Location = new Point(1, 3);
             tabControl1.Name = "tabControl1";
             tabControl1.SelectedIndex = 0;
@@ -124,7 +128,9 @@
             // 
             // tabPage1
             // 
-            tabPage1.BackColor = Color.DarkSalmon;
+            tabPage1.BackColor = Color.Transparent;
+            tabPage1.BackgroundImage = StudentHousing.Properties.Resources.abstract_bluish_paint_background_wallpaper;
+            tabPage1.BackgroundImageLayout = ImageLayout.Stretch;
             tabPage1.Controls.Add(panel6);
             tabPage1.Controls.Add(panel5);
             tabPage1.Controls.Add(panel4);
@@ -134,15 +140,16 @@
             tabPage1.Controls.Add(label1);
             tabPage1.Controls.Add(RegisterButton);
             tabPage1.Controls.Add(LogOutLabel1);
-            tabPage1.Location = new Point(4, 40);
+            tabPage1.Location = new Point(4, 39);
             tabPage1.Name = "tabPage1";
-            tabPage1.Padding = new Padding(3, 3, 3, 3);
-            tabPage1.Size = new Size(789, 405);
+            tabPage1.Padding = new Padding(3);
+            tabPage1.Size = new Size(789, 406);
             tabPage1.TabIndex = 0;
             tabPage1.Text = "Register";
             // 
             // panel6
             // 
+            panel6.BackColor = Color.Transparent;
             panel6.Controls.Add(textBox6);
             panel6.Controls.Add(label7);
             panel6.Location = new Point(386, 117);
@@ -162,12 +169,13 @@
             label7.AutoSize = true;
             label7.Location = new Point(3, 6);
             label7.Name = "label7";
-            label7.Size = new Size(102, 31);
+            label7.Size = new Size(101, 30);
             label7.TabIndex = 12;
             label7.Text = "Room№";
             // 
             // panel5
             // 
+            panel5.BackColor = Color.Transparent;
             panel5.Controls.Add(textBox5);
             panel5.Controls.Add(label6);
             panel5.Location = new Point(16, 263);
@@ -187,12 +195,13 @@
             label6.AutoSize = true;
             label6.Location = new Point(3, 6);
             label6.Name = "label6";
-            label6.Size = new Size(116, 31);
+            label6.Size = new Size(115, 30);
             label6.TabIndex = 12;
             label6.Text = "Password";
             // 
             // panel4
             // 
+            panel4.BackColor = Color.Transparent;
             panel4.Controls.Add(textBox4);
             panel4.Controls.Add(label5);
             panel4.Location = new Point(16, 196);
@@ -212,12 +221,13 @@
             label5.AutoSize = true;
             label5.Location = new Point(3, 6);
             label5.Name = "label5";
-            label5.Size = new Size(75, 31);
+            label5.Size = new Size(74, 30);
             label5.TabIndex = 12;
             label5.Text = "Email";
             // 
             // panel3
             // 
+            panel3.BackColor = Color.Transparent;
             panel3.Controls.Add(textBox3);
             panel3.Controls.Add(label4);
             panel3.Location = new Point(352, 55);
@@ -238,12 +248,13 @@
             label4.AutoSize = true;
             label4.Location = new Point(3, 6);
             label4.Name = "label4";
-            label4.Size = new Size(52, 31);
+            label4.Size = new Size(51, 30);
             label4.TabIndex = 12;
             label4.Text = "Age";
             // 
             // panel2
             // 
+            panel2.BackColor = Color.Transparent;
             panel2.Controls.Add(textBox2);
             panel2.Controls.Add(label3);
             panel2.Location = new Point(16, 126);
@@ -263,12 +274,13 @@
             label3.AutoSize = true;
             label3.Location = new Point(3, 6);
             label3.Name = "label3";
-            label3.Size = new Size(122, 31);
+            label3.Size = new Size(121, 30);
             label3.TabIndex = 12;
             label3.Text = "Username";
             // 
             // panel1
             // 
+            panel1.BackColor = Color.Transparent;
             panel1.Controls.Add(textBox1);
             panel1.Controls.Add(label2);
             panel1.Location = new Point(16, 55);
@@ -286,20 +298,22 @@
             // label2
             // 
             label2.AutoSize = true;
+            label2.BackColor = Color.Transparent;
             label2.Location = new Point(3, 6);
             label2.Name = "label2";
-            label2.Size = new Size(75, 31);
+            label2.Size = new Size(74, 30);
             label2.TabIndex = 12;
             label2.Text = "Name";
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Sitka Small", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.ForeColor = Color.GhostWhite;
+            label1.BackColor = Color.Transparent;
+            label1.Font = new Font("Sitka Small", 15.75F, FontStyle.Bold);
+            label1.ForeColor = Color.Black;
             label1.Location = new Point(16, 12);
             label1.Name = "label1";
-            label1.Size = new Size(405, 31);
+            label1.Size = new Size(404, 30);
             label1.TabIndex = 11;
             label1.Text = "To register a new user, please, type";
             // 
@@ -318,7 +332,8 @@
             // LogOutLabel1
             // 
             LogOutLabel1.AutoSize = true;
-            LogOutLabel1.Font = new Font("Trebuchet MS", 18F, FontStyle.Bold, GraphicsUnit.Point);
+            LogOutLabel1.BackColor = Color.Transparent;
+            LogOutLabel1.Font = new Font("Trebuchet MS", 18F, FontStyle.Bold);
             LogOutLabel1.ForeColor = Color.GhostWhite;
             LogOutLabel1.Location = new Point(683, 3);
             LogOutLabel1.Name = "LogOutLabel1";
@@ -326,6 +341,16 @@
             LogOutLabel1.TabIndex = 8;
             LogOutLabel1.Text = "Log Out";
             LogOutLabel1.Click += LogOutLabel1_Click;
+            // 
+            // tabPage3
+            // 
+            tabPage3.Location = new Point(4, 39);
+            tabPage3.Name = "tabPage3";
+            tabPage3.Padding = new Padding(3);
+            tabPage3.Size = new Size(789, 406);
+            tabPage3.TabIndex = 2;
+            tabPage3.Text = "Complaints";
+            tabPage3.UseVisualStyleBackColor = true;
             // 
             // AdminForm
             // 
@@ -384,5 +409,6 @@
         private Label label7;
         private Button sendAnnouncement_btn;
         private TextBox textBox7;
+        private TabPage tabPage3;
     }
 }

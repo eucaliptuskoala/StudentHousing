@@ -36,6 +36,7 @@ namespace StudentApp1
             // 
             // listBox1
             // 
+            listBox1.BackColor = Color.White;
             listBox1.FormattingEnabled = true;
             listBox1.ItemHeight = 15;
             listBox1.Location = new Point(12, 52);
@@ -46,18 +47,21 @@ namespace StudentApp1
             // 
             // button1
             // 
+            button1.BackColor = Color.White;
             button1.Location = new Point(255, 394);
             button1.Name = "button1";
             button1.Size = new Size(280, 44);
             button1.TabIndex = 1;
             button1.Text = "Leave a complaint";
-            button1.UseVisualStyleBackColor = true;
+            button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
             // 
             // Complaints
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackgroundImage = StudentHousing.Properties.Resources.banner_with_abstract_background_with_colorful_paper_cutout_waves;
+            BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(800, 450);
             Controls.Add(button1);
             Controls.Add(listBox1);

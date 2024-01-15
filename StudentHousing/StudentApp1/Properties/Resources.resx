@@ -118,22 +118,67 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="Без названия" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Без названия.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="tyhb_9" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tyhb_9.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="8ecd7a74040c6137d8db25014de3cfaa" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\8ecd7a74040c6137d8db25014de3cfaa.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="pxfuel" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pxfuel.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="rt5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\rt5.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="rm222-mind-20" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\rm222-mind-20.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="logo1_100x100" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\logo1 100x100.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="watercolor-texture-color-wallpaper" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\watercolor-texture-color-wallpaper.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="logo1_50x50" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logo1 50x50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="abstract-bluish-paint-background-wallpaper" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\abstract-bluish-paint-background-wallpaper.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Без названия" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Без названия.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="logo1_100x100" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logo1 100x100.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="c15" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\c15.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="banner-with-abstract-background-with-colorful-paper-cutout-waves" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\banner-with-abstract-background-with-colorful-paper-cutout-waves.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="22" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\22.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="4853433" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\4853433.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="xoe10" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\xoe10.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="48534331" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\48534331.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="abstract-bluish-paint-background-wallpaper1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\abstract-bluish-paint-background-wallpaper1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="8ecd7a74040c6137d8db25014de3cfaa" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\8ecd7a74040c6137d8db25014de3cfaa.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="abstract-background-blue-wallpaper-image" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\abstract-background-blue-wallpaper-image.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pxfuel" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pxfuel.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="c151" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\c151.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="watercolor-texture-background-light-gray-wallpaper" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\watercolor-texture-background-light-gray-wallpaper.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="v463-aum-69-abstractbackground" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\v463-aum-69-abstractbackground.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

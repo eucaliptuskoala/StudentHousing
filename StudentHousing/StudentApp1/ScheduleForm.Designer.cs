@@ -81,7 +81,7 @@
             // 
             // BackBtn
             // 
-            BackBtn.Location = new Point(12, 7);
+            BackBtn.Location = new Point(12, 21);
             BackBtn.Name = "BackBtn";
             BackBtn.Size = new Size(91, 29);
             BackBtn.TabIndex = 5;
@@ -100,6 +100,8 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackgroundImage = Properties.Resources.abstract_bluish_paint_background_wallpaper;
+            BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(749, 450);
             Controls.Add(eventsPanel);
             Controls.Add(BackBtn);

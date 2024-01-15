@@ -45,12 +45,13 @@
             // 
             // addButton
             // 
+            addButton.BackColor = Color.White;
             addButton.Location = new Point(114, 198);
             addButton.Name = "addButton";
             addButton.Size = new Size(119, 37);
             addButton.TabIndex = 2;
             addButton.Text = "Add an event";
-            addButton.UseVisualStyleBackColor = true;
+            addButton.UseVisualStyleBackColor = false;
             addButton.Click += addButton_Click;
             // 
             // LeftLabel
@@ -90,6 +91,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.Salmon;
             ClientSize = new Size(365, 282);
             Controls.Add(dateLabel);
             Controls.Add(RightLabel);

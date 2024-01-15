@@ -30,14 +30,15 @@
         {
             BackButton = new Button();
             AddNotes = new Button();
-            tableLayoutPanel = new TableLayoutPanel();
+            NotesPanel = new Panel();
             SuspendLayout();
             // 
             // BackButton
             // 
-            BackButton.Location = new Point(12, 40);
+            BackButton.Location = new Point(8, 24);
+            BackButton.Margin = new Padding(2);
             BackButton.Name = "BackButton";
-            BackButton.Size = new Size(160, 82);
+            BackButton.Size = new Size(112, 49);
             BackButton.TabIndex = 1;
             BackButton.Text = "Back";
             BackButton.UseVisualStyleBackColor = true;
@@ -45,35 +46,33 @@
             // 
             // AddNotes
             // 
-            AddNotes.Location = new Point(1172, 41);
+            AddNotes.Location = new Point(820, 25);
+            AddNotes.Margin = new Padding(2);
             AddNotes.Name = "AddNotes";
-            AddNotes.Size = new Size(175, 81);
+            AddNotes.Size = new Size(122, 49);
             AddNotes.TabIndex = 2;
             AddNotes.Text = "Add a note";
             AddNotes.UseVisualStyleBackColor = true;
             AddNotes.Click += AddNotes_Click;
             // 
-            // tableLayoutPanel
+            // NotesPanel
             // 
-            tableLayoutPanel.ColumnCount = 2;
-            tableLayoutPanel.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-            tableLayoutPanel.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-            tableLayoutPanel.Location = new Point(12, 187);
-            tableLayoutPanel.Name = "tableLayoutPanel";
-            tableLayoutPanel.RowCount = 2;
-            tableLayoutPanel.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanel.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanel.Size = new Size(1396, 658);
-            tableLayoutPanel.TabIndex = 3;
+            NotesPanel.Location = new Point(132, 111);
+            NotesPanel.Name = "NotesPanel";
+            NotesPanel.Size = new Size(810, 364);
+            NotesPanel.TabIndex = 7;
             // 
             // NoteDisplayForm
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1438, 857);
-            Controls.Add(tableLayoutPanel);
+            BackgroundImage = StudentHousing.Properties.Resources._4853433;
+            BackgroundImageLayout = ImageLayout.Stretch;
+            ClientSize = new Size(1007, 514);
+            Controls.Add(NotesPanel);
             Controls.Add(AddNotes);
             Controls.Add(BackButton);
+            Margin = new Padding(2);
             Name = "NoteDisplayForm";
             Text = "NoteDisplayForm";
             ResumeLayout(false);
@@ -82,6 +81,6 @@
         #endregion
         private Button BackButton;
         private Button AddNotes;
-        private TableLayoutPanel tableLayoutPanel;
+        private Panel NotesPanel;
     }
 }

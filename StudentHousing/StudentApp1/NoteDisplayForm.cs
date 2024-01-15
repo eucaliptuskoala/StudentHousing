@@ -35,26 +35,119 @@ namespace StudentApp1
             }
         }
 
+
         private void DisplayLatestNotes(List<Note> notes)
         {
+            Panel notesContainer = new Panel
+            {
+                Dock = DockStyle.Fill,
+                AutoScroll = true,
+            };
 
-            tableLayoutPanel.Controls.Clear();
+            NotesPanel.Controls.Clear();
+            NotesPanel.Controls.Add(notesContainer);
 
-            // Display the latest 4 notes
             int startIndex = Math.Max(0, notes.Count - 4);
 
-            for (int i = startIndex; i < notes.Count; i++)
+            for (int i = startIndex, noteNumber = 1; i < notes.Count; i++, noteNumber++)
             {
                 Note note = notes[i];
+                User currentUser = CurrentUser.LoggedInUser;
 
-                // Создаем новый Label для отображения заметки
-                Label label = new Label();
-                label.Text = note.Content; // Устанавливаем текст заметки
+                Panel notePanel = new Panel
+                {
+                    Dock = DockStyle.Top,
+                    AutoSize = true,
+                    Margin = new Padding(0, 0, 0, 10),
+                };
 
-                // Добавляем Label в tableLayoutPanel
-                tableLayoutPanel.Controls.Add(label);
+                Label label = new Label
+                {
+                    Text = $"{noteNumber}. {TruncateText(note.Content, 500)}",
+                    AutoSize = true,
+                    MaximumSize = new Size(400, 0),
+                    Font = new Font("Arial", 12, FontStyle.Regular),
+                };
+
+                Button deleteButton = new Button
+                {
+                    Text = "Delete",
+                    Tag = note,
+                    Font = new Font("Arial", 10, FontStyle.Regular),
+                };
+
+                deleteButton.Click += DeleteNoteButton_Click;
+
+                label.Location = new Point(0, 0);
+                notePanel.Controls.Add(label);
+
+                if (label.Right > 400)
+                {
+                    label.MaximumSize = new Size(400 - deleteButton.Width - 10, 0);
+                    deleteButton.Location = new Point(label.Right + 10, 0);
+                    notePanel.Controls.Add(deleteButton);
+                }
+                else
+                {
+                    deleteButton.Location = new Point(label.Right + 10, 0);
+                    notePanel.Controls.Add(label);
+                    notePanel.Controls.Add(deleteButton);
+                }
+
+                label.Click += (sender, e) => ShowNoteDetails(note);
+
+                notesContainer.Controls.Add(notePanel);
             }
+
+            Panel spacerPanel = new Panel
+            {
+                Height = 20,
+                Dock = DockStyle.Top,
+            };
+
+            notesContainer.Controls.Add(spacerPanel);
         }
+
+
+
+
+
+
+        private string TruncateText(string text, int maxLength)
+        {
+            if (text.Length > maxLength)
+            {
+                return text.Substring(0, maxLength) + "...";
+            }
+            return text;
+        }
+
+        private void ShowNoteDetails(Note note)
+        {
+            string creatorName = (note.Creator != null) ? note.Creator.Name : "Unknown";
+
+            string message = $"Description: {note.Content}\nCreated by: {creatorName}";
+            MessageBox.Show(message, "Note Details", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+
+
+
+
+
+        private void DeleteNoteButton_Click(object sender, EventArgs e)
+        {
+            Button deleteButton = (Button)sender;
+            Note noteToDelete = (Note)deleteButton.Tag;
+            RemoveNote(noteToDelete);
+        }
+
+        private void RemoveNote(Note note)
+        {
+            notes.Remove(note);
+            DisplayLatestNotes(notes); 
+        }
+
 
 
 
@@ -67,10 +160,9 @@ namespace StudentApp1
 
         private void AddNotes_Click(object sender, EventArgs e)
         {
-            AddNoteForm addNotesForm = new AddNoteForm(userRoom);
+            AddNoteForm addNotesForm = new AddNoteForm(userRoom, currentUser);
             addNotesForm.ShowDialog();
 
-            // Reload notes after adding
             LoadNotesForCurrentUserRoom();
         }
     }

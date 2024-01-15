@@ -34,10 +34,14 @@
             // 
             // monthCalendar1
             // 
+            monthCalendar1.BackColor = Color.LightCoral;
             monthCalendar1.CalendarDimensions = new Size(2, 2);
+            monthCalendar1.Font = new Font("Arial Narrow", 9F, FontStyle.Regular, GraphicsUnit.Point, 204);
             monthCalendar1.Location = new Point(-1, 1);
             monthCalendar1.Name = "monthCalendar1";
             monthCalendar1.TabIndex = 0;
+            monthCalendar1.TitleBackColor = Color.MediumPurple;
+            monthCalendar1.TitleForeColor = Color.SkyBlue;
             monthCalendar1.DateSelected += monthCalendar1_DateSelected;
             // 
             // btnOK
@@ -54,6 +58,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.RosyBrown;
             ClientSize = new Size(329, 391);
             Controls.Add(btnOK);
             Controls.Add(monthCalendar1);
