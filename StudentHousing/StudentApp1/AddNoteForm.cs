@@ -1,73 +1,77 @@
 ﻿using Newtonsoft.Json;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using System.IO;
+using System.Windows.Forms;
 
 namespace StudentApp1
 {
     public partial class AddNoteForm : Form
     {
-        private List<Note> notes;
-        private const int MaxNotes = 4;
+        private readonly Room userRoom;
 
-        public AddNoteForm()
+        public AddNoteForm(Room room)
         {
             InitializeComponent();
-            LoadNotes();
+            userRoom = room;
         }
 
-        private void LoadNotes()
+        private void SaveRoomToJson()
         {
+            string roomsFilePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "..\\..\\..\\rooms.json");
+
             try
             {
-                string notesFilePath = Path.Combine(Application.StartupPath, "notes.json");
-                string json = File.ReadAllText(notesFilePath);
-                notes = JsonConvert.DeserializeObject<List<Note>>(json);
+                // Читаем существующий JSON из файла
+                string existingJson = File.Exists(roomsFilePath) ? File.ReadAllText(roomsFilePath) : "";
+
+                // Десериализуем JSON в список комнат
+                List<Room> rooms = JsonConvert.DeserializeObject<List<Room>>(existingJson) ?? new List<Room>();
+
+                // Находим текущую комнату в списке (или создаем новую, если ее нет)
+                Room currentRoom = rooms.FirstOrDefault(r => r.RoomNumber == userRoom.RoomNumber);
+                if (currentRoom == null)
+                {
+                    currentRoom = new Room(userRoom.RoomNumber);
+                    rooms.Add(currentRoom);
+                }
+
+                // Обновляем данные текущей комнаты (замените на свою логику)
+                currentRoom.Notes = userRoom.Notes;
+
+                // Сериализуем список комнат обратно в JSON
+                string updatedJson = JsonConvert.SerializeObject(rooms, Formatting.Indented);
+
+                // Пишем обновленный JSON обратно в файл
+                File.WriteAllText(roomsFilePath, updatedJson);
             }
-            catch (FileNotFoundException)
+            catch (Exception ex)
             {
-                notes = new List<Note>();
+                MessageBox.Show($"Error saving room to JSON file: {ex.Message}");
             }
         }
 
-        private void SaveNotes()
+        private void btnAddNote_Click_1(object sender, EventArgs e)
         {
+            string noteContent = textBoxNote.Text;
 
-            string notesFilePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "..\\..\\..\\notes.json");
-            string json = JsonConvert.SerializeObject(notes);
-            File.WriteAllText(notesFilePath, json);
-
-        }
-
-        private void BackButton_Click(object sender, EventArgs e)
-        {
-            NoteDisplayForm noteDisplayForm = new NoteDisplayForm(CurrentUser.LoggedInUser);
-            this.Close();
-            noteDisplayForm.Show();
-        }
-
-        private void AddNoteButton_Click(object sender, EventArgs e)
-        {
-            Note newNote = new Note(NoteTextBox.Text);
-            notes.Add(newNote);
-
-            if (notes.Count > MaxNotes)
+            if (!string.IsNullOrEmpty(noteContent))
             {
-                notes.RemoveAt(0);
-            }
+                // Create a new Note
+                Note newNote = new Note(noteContent);
 
-            SaveNotes();
-            NoteDisplayForm noteDisplayForm = new NoteDisplayForm(CurrentUser.LoggedInUser);
-            this.Close();
-            noteDisplayForm.Show();
+                // Add the note to the user's room
+                userRoom.Notes.Add(newNote);
+
+                // Save the room to update the notes in the file
+                SaveRoomToJson();
+
+                MessageBox.Show("Note added successfully!");
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Please enter a note before adding.");
+            }
         }
     }
-
 }

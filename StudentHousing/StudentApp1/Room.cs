@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace StudentApp1
 {
     public class Room
@@ -12,6 +13,9 @@ namespace StudentApp1
         private int taskIdCounter = 1;
         public int RoomNumber { get; set; }
         public List<User> Users { get; set; } = new List<User>();
+        public List<Task> Tasks { get; set; } = new List<Task>();
+        public List<Note> Notes { get; set; } = new List<Note>();
+
 
         public Room(int roomNumber)
         {
@@ -21,30 +25,27 @@ namespace StudentApp1
         {
             Users.Add(user);
         }
+
+        public List<User> GetUsersInRoom()
+        {
+            return Users;
+        }
         public void AssignTasksRandomly()
         {
-            Random random = new Random();
 
-            foreach (User user in Users)
+            Array taskTypes = Enum.GetValues(typeof(TaskType));
+
+            foreach (TaskType taskType in taskTypes)
             {
-                Console.WriteLine($"Assigning tasks for user {user.Name}, Room: {RoomNumber}");
-
-                foreach (TaskType task in Enum.GetValues(typeof(TaskType)))
-                {
-                    DateTime dateTime = DateTime.Now.AddDays(random.Next(1, 7));
-                    Task newTask = new Task(taskIdCounter++, task.ToString(), dateTime, task);
-
-                    // Ensure user.Tasks is initialized before adding tasks
-                    if (user.Tasks == null)
-                    {
-                        user.Tasks = new List<Task>();
-                    }
-
-                    user.Tasks.Add(newTask);
-
-                    Console.WriteLine($"Task assigned: {newTask.GetDescription()} for user {user.Name}");
-                }
+                Task newTask = new Task(GetNextTaskId(), $"Perform {taskType} task", DateTime.Now.AddDays(7), taskType);
+                Tasks.Add(newTask);
             }
         }
+
+        private int GetNextTaskId()
+        {
+            return taskIdCounter++;
+        }
+
     }
 }

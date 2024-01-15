@@ -17,6 +17,7 @@ namespace StudentApp1
 {
     public partial class AdminForm : Form
     {
+        private string roomsFilePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "..\\..\\..\\rooms.json");
         private string jsonFilePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "..\\..\\..\\users.json");
         private string messageFilePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "..\\..\\..\\AnnouncementMessage.json");
         private UserDatabase userDatabase;
@@ -27,6 +28,7 @@ namespace StudentApp1
         {
             InitializeComponent();
             LoadUserData();
+            rooms = LoadRoomsFromJson();
             InitializeRooms();
 
         }
@@ -56,7 +58,9 @@ namespace StudentApp1
         private void SaveUserData()
         {
             string json = JsonConvert.SerializeObject(userDatabase);
-            File.WriteAllText(jsonFilePath, json);
+            File.WriteAllText(jsonFilePath, json);  
+
+            SaveRoomsToJson();
         }
 
         private void SaveTextToJsonFile(string text, string filePath)
@@ -130,8 +134,12 @@ namespace StudentApp1
                 Room = int.Parse(textBox6.Text)
             };
             int roomNumber = int.Parse(textBox6.Text);
+            if (rooms[roomNumber - 1].GetUsersInRoom().Count == 0)
+            {
+                rooms[roomNumber - 1].AssignTasksRandomly();
+            }
             rooms[roomNumber - 1].Register(newUser);
-            rooms[roomNumber - 1].AssignTasksRandomly();
+
 
             userDatabase.Users.Add(newUser);
             SaveUserData();
@@ -150,5 +158,37 @@ namespace StudentApp1
 
             MessageBox.Show("Saved to JSON file!");
         }
+        private void SaveRoomsToJson()
+        {
+            string json = JsonConvert.SerializeObject(rooms);
+            File.WriteAllText(roomsFilePath, json);
+        }
+        private List<Room> LoadRoomsFromJson()
+        {
+            try
+            {
+                if (File.Exists(roomsFilePath))
+                {
+                    string jsonText = File.ReadAllText(roomsFilePath);
+
+                    if (!string.IsNullOrWhiteSpace(jsonText))
+                    {
+                        List<Room> loadedRooms = JsonConvert.DeserializeObject<List<Room>>(jsonText);
+
+                        if (loadedRooms != null)
+                        {
+                            return loadedRooms;
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Что-то пошло не так при чтении файла комнат: " + ex.Message);
+            }
+
+            return new List<Room>();
+        }
+
     }
 }

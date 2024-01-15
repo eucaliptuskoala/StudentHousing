@@ -1,63 +1,57 @@
-﻿using Microsoft.VisualBasic.ApplicationServices;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace StudentApp1
 {
     public partial class ToDoForm : Form
     {
-        private User authenticatedUser;
+        private readonly User currentUser;
+        private readonly Room userRoom;
 
-        public ToDoForm(User user)
+        public ToDoForm(User user, Room room)
         {
             InitializeComponent();
-
-            if (user != null && user.Tasks != null)
-            {
-                authenticatedUser = user;
-                DisplayTasks();
-            }
-            else
-            {
-                MessageBox.Show("User information is null.");
-                this.Close();
-            }
+            currentUser = user;
+            userRoom = room;
+            LoadTasksForCurrentUserRoom();
         }
 
-
-
-        private void DisplayTasks()
+        private void LoadTasksForCurrentUserRoom()
         {
-            if (authenticatedUser != null && authenticatedUser.Tasks != null)
+            if (userRoom != null)
             {
-                foreach (Task task in authenticatedUser.Tasks)
-                {
-                    if (task != null && task != null)
-                    {
-                        string taskInfo = $"{task.GetTaskId()}, {task.GetTasks()}, {task.GetDescription()}, {task.GetDateTime():yyyy-MM-dd}, {authenticatedUser.Name}";
+                List<Task> tasksForRoom = userRoom.Tasks;
 
-                        listBoxTasks.Items.Add(taskInfo);
-                    }
-                }
+                DisplayTasks(tasksForRoom);
             }
             else
             {
-                MessageBox.Show("User information or tasks are null.");
-                this.Close();
+                MessageBox.Show("User is not assigned to any room.");
             }
         }
+
+        private void DisplayTasks(List<Task> tasks)
+        {
+            // Clear ListBox before adding new tasks
+            listBoxTasks.Items.Clear();
+
+            foreach (Task task in tasks)
+            {
+                // Formulate a string for display in the list
+                string taskString = $"{task.GetTaskId()}. {task.GetDescription()} - {task.GetDateTime()}";
+
+                // Add the string to the ListBox
+                listBoxTasks.Items.Add(taskString);
+            }
+        }
+
         private void buttonClose_Click(object sender, EventArgs e)
         {
+            // Go back to the MainForm when closing ToDoForm
+            MainForm mainForm = new MainForm(currentUser);
             this.Close();
-            MainForm form1 = new MainForm(authenticatedUser);
-            form1.Show();
+            mainForm.Show();
         }
     }
 }

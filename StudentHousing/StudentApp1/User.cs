@@ -15,7 +15,6 @@ namespace StudentApp1
         public int Room { get; set; }
         public string Email { get; set; }
         public string Password { get; set; }
-        public List<Task> Tasks { get; set; } = new List<Task>();
-
+        public Room UserRoom { get; set; }
     }
 }

@@ -1,87 +1,77 @@
 ﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.IO;
-using Microsoft.VisualBasic.ApplicationServices;
 
 
 namespace StudentApp1
 {
-
     public partial class NoteDisplayForm : Form
     {
-        private User authenticatedUser;
-
+        private readonly User currentUser;
+        private readonly Room userRoom;
         private List<Note> notes;
-        public NoteDisplayForm(User user)
+
+        public NoteDisplayForm(User user, Room room)
         {
             InitializeComponent();
-            LoadNotes();
-            authenticatedUser = user;
-
+            currentUser = user;
+            userRoom = room;
+            LoadNotesForCurrentUserRoom();
         }
 
-        private void BackButton_Click(object sender, EventArgs e)
+        private void LoadNotesForCurrentUserRoom()
         {
-            MainForm form1 = new MainForm(authenticatedUser);
-            this.Close();
-            form1.Show();
-        }
-        private void LoadNotes()
-        {
-            string jsonFilePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "..\\..\\..\\notes.json");
-
-            if (File.Exists(jsonFilePath))
+            if (userRoom != null)
             {
-                string json = File.ReadAllText(jsonFilePath);
-                notes = JsonConvert.DeserializeObject<List<Note>>(json);
+                notes = userRoom.Notes;
+
+                DisplayLatestNotes(notes);
             }
             else
             {
-                notes = new List<Note>();
+                MessageBox.Show("User is not assigned to any room.");
             }
-
-            DisplayNotes();
         }
 
-        private void DisplayNotes()
+        private void DisplayLatestNotes(List<Note> notes)
         {
+
             tableLayoutPanel.Controls.Clear();
 
-            foreach (Note note in notes)
+            // Display the latest 4 notes
+            int startIndex = Math.Max(0, notes.Count - 4);
+
+            for (int i = startIndex; i < notes.Count; i++)
             {
-                Label noteLabel = CreateNoteLabel(note);
-                tableLayoutPanel.Controls.Add(noteLabel);
+                Note note = notes[i];
+
+                // Создаем новый Label для отображения заметки
+                Label label = new Label();
+                label.Text = note.Content; // Устанавливаем текст заметки
+
+                // Добавляем Label в tableLayoutPanel
+                tableLayoutPanel.Controls.Add(label);
             }
         }
 
-        private Label CreateNoteLabel(Note note)
-        {
-            Label label = new Label
-            {
-                BorderStyle = BorderStyle.Fixed3D,
-                Width = 400,
-                Height = 325,
-                Text = $"Author: {CurrentUser.LoggedInUser.Name}\n{note.Content}"
-            };
 
-            return label;
+
+        private void BackButton_Click(object sender, EventArgs e)
+        {
+            MainForm form1 = new MainForm(currentUser);
+            this.Close();
+            form1.Show();
         }
 
         private void AddNotes_Click(object sender, EventArgs e)
         {
-            this.Close();
-            AddNoteForm addNoteForm = new AddNoteForm();
-            addNoteForm.Show();
+            AddNoteForm addNotesForm = new AddNoteForm(userRoom);
+            addNotesForm.ShowDialog();
+
+            // Reload notes after adding
+            LoadNotesForCurrentUserRoom();
         }
     }
-
 }
-

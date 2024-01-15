@@ -4,10 +4,15 @@ namespace StudentApp1
 {
     public partial class MainForm : Form
     {
+        private User AuthenticatedUser { get; set; }
+
         public MainForm(User authenticatedUser)
         {
             InitializeComponent();
+            this.AuthenticatedUser = authenticatedUser; 
+
             UpdateHelloText();
+
         }
 
         private void UpdateHelloText()
@@ -37,7 +42,7 @@ namespace StudentApp1
         }
         private void Notes_Click(object sender, EventArgs e)
         {
-            NoteDisplayForm noteDisplayForm = new NoteDisplayForm(CurrentUser.LoggedInUser);
+            NoteDisplayForm noteDisplayForm = new NoteDisplayForm(AuthenticatedUser, AuthenticatedUser.UserRoom);
             this.Close();
             noteDisplayForm.Show();
         }
@@ -55,7 +60,7 @@ namespace StudentApp1
 
         private void ToDo_Click(object sender, EventArgs e)
         {
-            ToDoForm toDoForm = new ToDoForm(CurrentUser.LoggedInUser);
+            ToDoForm toDoForm = new ToDoForm(AuthenticatedUser, AuthenticatedUser.UserRoom);
             this.Close();
             toDoForm.Show();
         }

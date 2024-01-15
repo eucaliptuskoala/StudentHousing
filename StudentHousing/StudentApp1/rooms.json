@@ -1,0 +1,251 @@
+[
+  {
+    "RoomNumber": 1,
+    "Users": [
+      {
+        "Id": 35,
+        "Name": "das",
+        "Username": "das",
+        "Age": 1,
+        "Room": 1,
+        "Email": "das",
+        "Password": "das",
+        "UserRoom": null
+      }
+    ],
+    "Tasks": [
+      {
+        "taskId": 1,
+        "description": "Perform Bathroom task",
+        "dateTime": "2024-01-22T03:07:10.0198521+01:00",
+        "TaskType": 0
+      },
+      {
+        "taskId": 2,
+        "description": "Perform Kitchen task",
+        "dateTime": "2024-01-22T03:07:10.0199866+01:00",
+        "TaskType": 0
+      },
+      {
+        "taskId": 3,
+        "description": "Perform Hallway task",
+        "dateTime": "2024-01-22T03:07:10.0199884+01:00",
+        "TaskType": 0
+      },
+      {
+        "taskId": 4,
+        "description": "Perform Clothes task",
+        "dateTime": "2024-01-22T03:07:10.0199888+01:00",
+        "TaskType": 0
+      },
+      {
+        "taskId": 5,
+        "description": "Perform Garbage task",
+        "dateTime": "2024-01-22T03:07:10.0199892+01:00",
+        "TaskType": 0
+      },
+      {
+        "taskId": 6,
+        "description": "Perform Dishes task",
+        "dateTime": "2024-01-22T03:07:10.0199899+01:00",
+        "TaskType": 0
+      },
+      {
+        "taskId": 7,
+        "description": "Perform Paper task",
+        "dateTime": "2024-01-22T03:07:10.0199903+01:00",
+        "TaskType": 0
+      }
+    ],
+    "Notes": [
+      {
+        "Content": "kurururur"
+      }
+    ]
+  },
+  {
+    "RoomNumber": 2,
+    "Users": [],
+    "Tasks": [],
+    "Notes": []
+  },
+  {
+    "RoomNumber": 3,
+    "Users": [],
+    "Tasks": [],
+    "Notes": []
+  },
+  {
+    "RoomNumber": 4,
+    "Users": [],
+    "Tasks": [],
+    "Notes": []
+  },
+  {
+    "RoomNumber": 5,
+    "Users": [],
+    "Tasks": [],
+    "Notes": []
+  },
+  {
+    "RoomNumber": 6,
+    "Users": [
+      {
+        "Id": 33,
+        "Name": "bimba",
+        "Username": "bimba",
+        "Age": 6,
+        "Room": 6,
+        "Email": "bimba",
+        "Password": "bimba",
+        "UserRoom": null
+      },
+      {
+        "Id": 34,
+        "Name": "lesya",
+        "Username": "lesya",
+        "Age": 6,
+        "Room": 6,
+        "Email": "lesya",
+        "Password": "lesya",
+        "UserRoom": null
+      }
+    ],
+    "Tasks": [
+      {
+        "taskId": 1,
+        "description": "Perform Bathroom task",
+        "dateTime": "2024-01-22T03:01:44.351335+01:00",
+        "TaskType": 0
+      },
+      {
+        "taskId": 2,
+        "description": "Perform Kitchen task",
+        "dateTime": "2024-01-22T03:01:44.3535848+01:00",
+        "TaskType": 0
+      },
+      {
+        "taskId": 3,
+        "description": "Perform Hallway task",
+        "dateTime": "2024-01-22T03:01:44.3535883+01:00",
+        "TaskType": 0
+      },
+      {
+        "taskId": 4,
+        "description": "Perform Clothes task",
+        "dateTime": "2024-01-22T03:01:44.3535889+01:00",
+        "TaskType": 0
+      },
+      {
+        "taskId": 5,
+        "description": "Perform Garbage task",
+        "dateTime": "2024-01-22T03:01:44.3535893+01:00",
+        "TaskType": 0
+      },
+      {
+        "taskId": 6,
+        "description": "Perform Dishes task",
+        "dateTime": "2024-01-22T03:01:44.3535902+01:00",
+        "TaskType": 0
+      },
+      {
+        "taskId": 7,
+        "description": "Perform Paper task",
+        "dateTime": "2024-01-22T03:01:44.3535906+01:00",
+        "TaskType": 0
+      }
+    ],
+    "Notes": [
+      {
+        "Content": "dasasd"
+      },
+      {
+        "Content": "zcxcz"
+      }
+    ]
+  },
+  {
+    "RoomNumber": 7,
+    "Users": [],
+    "Tasks": [],
+    "Notes": []
+  },
+  {
+    "RoomNumber": 8,
+    "Users": [],
+    "Tasks": [],
+    "Notes": []
+  },
+  {
+    "RoomNumber": 9,
+    "Users": [],
+    "Tasks": [],
+    "Notes": []
+  },
+  {
+    "RoomNumber": 10,
+    "Users": [],
+    "Tasks": [],
+    "Notes": []
+  },
+  {
+    "RoomNumber": 1,
+    "Users": [],
+    "Tasks": [],
+    "Notes": []
+  },
+  {
+    "RoomNumber": 2,
+    "Users": [],
+    "Tasks": [],
+    "Notes": []
+  },
+  {
+    "RoomNumber": 3,
+    "Users": [],
+    "Tasks": [],
+    "Notes": []
+  },
+  {
+    "RoomNumber": 4,
+    "Users": [],
+    "Tasks": [],
+    "Notes": []
+  },
+  {
+    "RoomNumber": 5,
+    "Users": [],
+    "Tasks": [],
+    "Notes": []
+  },
+  {
+    "RoomNumber": 6,
+    "Users": [],
+    "Tasks": [],
+    "Notes": []
+  },
+  {
+    "RoomNumber": 7,
+    "Users": [],
+    "Tasks": [],
+    "Notes": []
+  },
+  {
+    "RoomNumber": 8,
+    "Users": [],
+    "Tasks": [],
+    "Notes": []
+  },
+  {
+    "RoomNumber": 9,
+    "Users": [],
+    "Tasks": [],
+    "Notes": []
+  },
+  {
+    "RoomNumber": 10,
+    "Users": [],
+    "Tasks": [],
+    "Notes": []
+  }
+]

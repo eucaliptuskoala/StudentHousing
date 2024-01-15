@@ -29,57 +29,60 @@
         private void InitializeComponent()
         {
             BackButton = new Button();
-            AddNoteButton = new Button();
             label1 = new Label();
-            NoteTextBox = new RichTextBox();
+            textBoxNote = new RichTextBox();
+            btnAddNote = new Button();
             SuspendLayout();
             // 
             // BackButton
             // 
-            BackButton.Location = new Point(12, 41);
+            BackButton.Location = new Point(8, 25);
+            BackButton.Margin = new Padding(2);
             BackButton.Name = "BackButton";
-            BackButton.Size = new Size(145, 64);
+            BackButton.Size = new Size(102, 38);
             BackButton.TabIndex = 1;
             BackButton.Text = "Back";
             BackButton.UseVisualStyleBackColor = true;
-            BackButton.Click += BackButton_Click;
-            // 
-            // AddNoteButton
-            // 
-            AddNoteButton.Location = new Point(609, 692);
-            AddNoteButton.Name = "AddNoteButton";
-            AddNoteButton.Size = new Size(250, 61);
-            AddNoteButton.TabIndex = 2;
-            AddNoteButton.Text = "Submit";
-            AddNoteButton.UseVisualStyleBackColor = true;
-            AddNoteButton.Click += AddNoteButton_Click;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(668, 236);
+            label1.Location = new Point(468, 142);
+            label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
-            label1.Size = new Size(101, 25);
+            label1.Size = new Size(65, 15);
             label1.TabIndex = 4;
             label1.Text = "Add a note";
             // 
-            // NoteTextBox
+            // textBoxNote
             // 
-            NoteTextBox.Location = new Point(520, 299);
-            NoteTextBox.Name = "NoteTextBox";
-            NoteTextBox.Size = new Size(415, 167);
-            NoteTextBox.TabIndex = 5;
-            NoteTextBox.Text = "";
+            textBoxNote.Location = new Point(364, 179);
+            textBoxNote.Margin = new Padding(2);
+            textBoxNote.Name = "textBoxNote";
+            textBoxNote.Size = new Size(292, 102);
+            textBoxNote.TabIndex = 5;
+            textBoxNote.Text = "";
+            // 
+            // btnAddNote
+            // 
+            btnAddNote.Location = new Point(468, 363);
+            btnAddNote.Name = "btnAddNote";
+            btnAddNote.Size = new Size(75, 23);
+            btnAddNote.TabIndex = 6;
+            btnAddNote.Text = "button1";
+            btnAddNote.UseVisualStyleBackColor = true;
+            btnAddNote.Click += btnAddNote_Click_1;
             // 
             // AddNoteForm
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1439, 855);
-            Controls.Add(NoteTextBox);
+            ClientSize = new Size(1007, 513);
+            Controls.Add(btnAddNote);
+            Controls.Add(textBoxNote);
             Controls.Add(label1);
-            Controls.Add(AddNoteButton);
             Controls.Add(BackButton);
+            Margin = new Padding(2);
             Name = "AddNoteForm";
             Text = "AddNoteForm";
             ResumeLayout(false);
@@ -88,8 +91,8 @@
 
         #endregion
         private Button BackButton;
-        private Button AddNoteButton;
         private Label label1;
-        private RichTextBox NoteTextBox;
+        private RichTextBox textBoxNote;
+        private Button btnAddNote;
     }
 }
