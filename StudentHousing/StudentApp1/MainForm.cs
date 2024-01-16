@@ -13,7 +13,81 @@ namespace StudentApp1
 
             UpdateHelloText();
 
+            //UI
+            Announcements.MouseEnter += Announcements_MouseEnter;
+            Announcements.MouseLeave += Announcements_MouseLeave;
+            Rules.MouseEnter += Rules_MouseEnter;
+            Rules.MouseLeave += Rules_MouseLeave;
+            Notes.MouseEnter += Notes_MouseEnter;
+            Notes.MouseLeave += Notes_MouseLeave;
+            Complaints.MouseEnter += Complaints_MouseEnter;
+            Complaints.MouseLeave += Complaints_MouseLeave;
+            ToDo.MouseEnter += ToDo_MouseEnter;
+            ToDo.MouseLeave += ToDo_MouseLeave;
+            Schedule.MouseEnter += Schedule_MouseEnter;
+            Schedule.MouseLeave += Schedule_MouseLeave;
+
         }
+        private void Announcements_MouseEnter(object sender, EventArgs e)
+        {
+            Announcements.BackColor = System.Drawing.Color.LightBlue;
+        }
+
+        private void Announcements_MouseLeave(object sender, EventArgs e)
+        {
+            Announcements.BackColor = System.Drawing.SystemColors.Control;
+        }
+
+        private void Rules_MouseEnter(object sender, EventArgs e)
+        {
+            Rules.BackColor = System.Drawing.Color.LightBlue;
+        }
+
+        private void Rules_MouseLeave(object sender, EventArgs e)
+        {
+            Rules.BackColor = System.Drawing.SystemColors.Control;
+        }
+
+        private void Notes_MouseEnter(object sender, EventArgs e)
+        {
+            Notes.BackColor = System.Drawing.Color.LightBlue;
+        }
+
+        private void Notes_MouseLeave(object sender, EventArgs e)
+        {
+            Notes.BackColor = System.Drawing.SystemColors.Control;
+        }
+
+        private void Complaints_MouseEnter(object sender, EventArgs e)
+        {
+            Complaints.BackColor = System.Drawing.Color.LightBlue;
+        }
+
+        private void Complaints_MouseLeave(object sender, EventArgs e)
+        {
+            Complaints.BackColor = System.Drawing.SystemColors.Control;
+        }
+
+        private void ToDo_MouseEnter(object sender, EventArgs e)
+        {
+            ToDo.BackColor = System.Drawing.Color.LightBlue;
+        }
+
+        private void ToDo_MouseLeave(object sender, EventArgs e)
+        {
+            ToDo.BackColor = System.Drawing.SystemColors.Control;
+        }
+
+        private void Schedule_MouseEnter(object sender, EventArgs e)
+        {
+            Schedule.BackColor = System.Drawing.Color.LightBlue;
+        }
+
+        private void Schedule_MouseLeave(object sender, EventArgs e)
+        {
+            Schedule.BackColor = System.Drawing.SystemColors.Control;
+        }
+
 
         private void UpdateHelloText()
         {
